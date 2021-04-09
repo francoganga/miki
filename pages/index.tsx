@@ -17,9 +17,9 @@ export default function Home() {
         <Header/>
         <Box w="100%">
           <Container maxW="container.xl">
-            <Flex wrap="wrap" justify="space-around">
+            <Grid templateColumns="repeat(auto-fit, minmax(400px, 1fr))" gap={3} alignItems="center" placeItems="center">
                {items.map((_, idx) => <Portaretrato key={idx}/>) }
-            </Flex>
+            </Grid>
           </Container>
         </Box>
         <Box w="100%" bg="blue.500">
