@@ -17,7 +17,7 @@ export default function Home() {
         <Header/>
         <Box w="100%">
           <Container maxW="container.xl">
-            <Grid templateColumns="repeat(auto-fit, minmax(400px, 1fr))" gap={3} alignItems="center" placeItems="center">
+            <Grid templateColumns="repeat(auto-fit, minmax(400px, 1fr))" gap={1} alignItems="center" placeItems="center">
                {items.map((_, idx) => <Portaretrato key={idx}/>) }
             </Grid>
           </Container>
