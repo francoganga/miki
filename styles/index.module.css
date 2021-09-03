@@ -30,3 +30,9 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+a:active.link, a:focus.link {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}

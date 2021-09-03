@@ -7,21 +7,18 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-export default function Portaretrato() {
-  const random = Math.floor(getRandomArbitrary(1,4));
-  const path = `/assets/images/${random}.jpg`
-  const name = `Hikari ${random}`;
+export default function Portaretrato({url, id, nombre}) {
   return (
     <Flex w="400px" h="500px" align="center" justify="center">
       <Box className={styles.retratoContainer} w="90%" h="90%">
-        <Link href="/series/asd">
-          <Image src={path} alt="me" width="100%" height="100%" />
+        <a href={"/series/" + id}>
+          <Image src={url} alt="me" width="100%" height="100%" />
           <Box className={styles.overlay}>
             <Box className={styles.text}>
-            {name}
+            {nombre}
             </Box>
           </Box>
-        </Link>
+        </a>
       </Box>
     </Flex>
   )

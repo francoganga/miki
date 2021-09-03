@@ -4,6 +4,7 @@ import { Link, Grid, Box, Flex, Center, Container } from '@chakra-ui/react';
 import Header from '../components/header';
 import Image from 'next/image';
 import Portaretrato from '../components/portaretrato';
+import IMAGES  from '../src/images';
 
 
 const items = Array.from(new Array(20), () => "asd");
@@ -18,7 +19,7 @@ export default function Home() {
         <Box w="100%">
           <Container maxW="container.xl">
             <Grid templateColumns="repeat(auto-fit, minmax(400px, 1fr))" gap={1} alignItems="center" placeItems="center">
-               {items.map((_, idx) => <Portaretrato key={idx}/>) }
+               {IMAGES.map((i, idx) => <Portaretrato nombre={i.name} url={i.images[0]} id={i.name} key={idx}/>) }
             </Grid>
           </Container>
         </Box>
